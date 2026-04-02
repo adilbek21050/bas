@@ -1,5 +1,5 @@
 import {ADD_TO_BASKET, ADD_TO_FAVORITE, CURREN_Q, DEC_BASKET, DELETE_BASKET} from "../../components/UL";
-import app from "../../App";
+
 
 const initialState = {
     product: [
