@@ -4,7 +4,6 @@ import Product from "./components/Pages/Product";
 import Basket from "./components/Pages/Basket";
 import Favorite from "./components/Pages/Favorite";
 import Print from "./components/Pages/Print";
-import TableToExcel from "./TableToExcel";
 
 function App() {
     return (
