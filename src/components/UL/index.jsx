@@ -1,0 +1,5 @@
+export const ADD_TO_BASKET = "ADD_TO_BASKET"
+export const ADD_TO_FAVORITE = "ADD_TO_FAVORITE"
+export const DELETE_BASKET = "DELETE_BASKET"
+export const DEC_BASKET = "DEC_BASKET"
+export const CURREN_Q = "CURREN_Q"
