@@ -1,13 +1,12 @@
 import {ADD_TO_BASKET, ADD_TO_FAVORITE, CURREN_Q, DEC_BASKET, DELETE_BASKET} from "../../components/UL";
 
-
 const initialState = {
     product: [
         {
             id: 1,
             title: 'ARDUINO 2560 MEGA  ',
             description: 'Вискоза - 80%, Полиэстер - 20%',
-            price: 1295,
+            price: 1680,
             countInStock: 2,
             rating: 4,
             image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXuYpMvBzmGvJJ3GJPSD-PEfe-LnlDyG8w4Q&s'

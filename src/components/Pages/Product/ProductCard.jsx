@@ -12,8 +12,6 @@ const ProductCard = ({el}) => {
     const found = favorite.some(some => some.id === el.id)
 
 
-
-
     return (
         <div>
             <div className="w-[260px] m-10">

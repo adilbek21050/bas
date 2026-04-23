@@ -10,27 +10,19 @@ const Basket = () => {
         return acc + el.quantity * el.price * allCurren[defCurren][0]
     }, 0)
     const exportToExcel = () => {
-        // 1. Превращаем JSON в лист
         const worksheet = XLSX.utils.json_to_sheet(basket);
-
-        // 2. Создаем книгу и добавляем лист
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, "Закуп");
-
-        // 3. Генерируем файл и скачиваем
         const excelBuffer = XLSX.write(workbook, {
             bookType: "xlsx",
             type: "array",
         });
-
         const file = new Blob([excelBuffer], {
             type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         });
-
         saveAs(file, "Закуп.xlsx");
     };
     const clicks = () => basket.length !== 0 ? false : true;
-
 
 
     return (
@@ -65,9 +57,8 @@ const Basket = () => {
             </div>
             <div className="flex items-center justify-between">
                 <div className="py-6">
-                    <h1 className="text-xl font-bold">total: <span
-                        className="text-xl font-mono">{total}{allCurren[defCurren][1]}</span></h1>
-                    <h1 className="text-xl font-bold"> количество : {basket.length}</h1>
+                    <h1 className="text-xl font-bold">сумма: <span className="text-xl font-mono">{total} {allCurren[defCurren][1]}</span></h1>
+                    <h1 className="text-xl font-bold"> количество : {basket.length} шт</h1>
                 </div>
                 <div>
                     <button className="border-2 p-2 rounded-xl text-gray-800 bg-gray-100 shadow-xl/20 " disabled={clicks()} onClick={exportToExcel} >print</button>

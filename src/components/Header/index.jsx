@@ -16,9 +16,9 @@ const Header = () => {
         <div>
             <div className="container">
                 <div className="flex justify-between text-xl py-5">
-                    <div>
+                    <NavLink to={"/"}>
                         <img width={150} src={img} alt=""/>
-                    </div>
+                    </NavLink>
                     <div className="flex justify-between w-[400px]">
                         <NavLink to={"/"}>
                             product
